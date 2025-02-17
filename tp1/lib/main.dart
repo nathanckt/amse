@@ -14,7 +14,15 @@ class MyApp extends StatelessWidget {
       title: "Star W'Arms",
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.blue),
-        useMaterial3: true,
+        scaffoldBackgroundColor: Colors.black,
+        appBarTheme: AppBarTheme(
+          backgroundColor: Colors.black,
+          titleTextStyle: TextStyle(color: Colors.yellow, fontSize: 24),
+        ),
+        textTheme: const TextTheme(
+          bodyLarge: TextStyle(color: Colors.white),
+          bodyMedium: TextStyle(color: Colors.white),
+        ),
       ),
       home: const MyHomePage(title: 'Flutter Demo Home Page'),
     );
@@ -108,7 +116,7 @@ class _MyHomePageState extends State<MyHomePage> {
           ),
         ],
         currentIndex: selectedIndex,
-        selectedItemColor: Colors.blue,
+        selectedItemColor: Colors.yellow,
         onTap: _onItemTapped,
       ),
     );
