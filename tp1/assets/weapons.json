@@ -1,0 +1,21 @@
+[
+    {
+      "category": "sabre",
+      "name": "Sabre Laser de Luke",
+      "description": "L'arme emblématique de Luke Skywalker.",
+      "image": "https://example.com/luke_saber.png"
+    },
+    {
+      "category": "blaster",
+      "name": "Blaster de Han Solo",
+      "description": "L'arme préférée du contrebandier Han Solo.",
+      "image": "https://example.com/han_blaster.png"
+    },
+    {
+      "category": "vaisseaux",
+      "name": "X-Wing",
+      "description": "Chasseur stellaire utilisé par l'Alliance Rebelle.",
+      "image": "https://example.com/xwing.png"
+    }
+  ]
+  

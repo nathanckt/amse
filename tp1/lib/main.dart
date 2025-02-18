@@ -1,4 +1,7 @@
+import 'dart:convert';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+import 'weapon.dart';
 
 void main() {
   runApp(const MyApp());
@@ -139,17 +142,97 @@ class HomePage extends StatelessWidget {
     );
   }
 }
-class ArmsPage extends StatelessWidget {
+class ArmsPage extends StatefulWidget {
+  @override
+  State<ArmsPage> createState() => _ArmsPageState();
+}
+
+class _ArmsPageState extends State<ArmsPage> {
+  List<Weapon> allWeapons = [];
+  String selectedCategory = 'sabre';
+
+  @override
+  void initState() {
+    super.initState();
+    loadWeapons();
+  }
+
+  Future<void> loadWeapons() async {
+    final String response = await rootBundle.loadString('assets/weapons.json');
+    final List<dynamic> data = json.decode(response);
+    setState(() {
+      allWeapons = data.map((e) => Weapon.fromJson(e)).toList();
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
+    List<Weapon> filteredWeapons =
+        allWeapons.where((w) => w.category == selectedCategory).toList();
+
     return Scaffold(
-      body: Center(
-        child: Column(
-          mainAxisSize: MainAxisSize.min, // Pour centrer la colonne verticalement
-          children: [
-            Text("Piou Piou"),
-          ],
-        ),
+      appBar: AppBar(
+        title: Text("Armes Star Wars"),
+      ),
+      body: Column(
+        children: [
+          // Catégories avec TabBar
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: ToggleButtons(
+              isSelected: [
+                selectedCategory == 'sabre',
+                selectedCategory == 'blaster',
+                selectedCategory == 'vaisseaux',
+              ],
+              onPressed: (index) {
+                setState(() {
+                  selectedCategory = ['sabre', 'blaster', 'vaisseaux'][index];
+                });
+              },
+              children: const [
+                Padding(padding: EdgeInsets.all(8.0), child: Text('Sabres')),
+                Padding(padding: EdgeInsets.all(8.0), child: Text('Blasters')),
+                Padding(padding: EdgeInsets.all(8.0), child: Text('Vaisseaux')),
+              ],
+            ),
+          ),
+
+          // Liste des armes
+          Expanded(
+            child: ListView.builder(
+              itemCount: filteredWeapons.length,
+              itemBuilder: (context, index) {
+                final weapon = filteredWeapons[index];
+                return Card(
+                  elevation: 4,
+                  margin: const EdgeInsets.symmetric(vertical: 8, horizontal: 16),
+                  child: ListTile(
+                    leading: Image.network(
+                      weapon.image,
+                      width: 60,
+                      height: 60,
+                      fit: BoxFit.cover,
+                    ),
+                    title: Text(
+                      weapon.name,
+                      style: const TextStyle(fontWeight: FontWeight.bold),
+                    ),
+                    subtitle: Text(weapon.description),
+                    trailing: IconButton(
+                      icon: const Icon(Icons.favorite_border),
+                      onPressed: () {
+                        ScaffoldMessenger.of(context).showSnackBar(
+                          SnackBar(content: Text('${weapon.name} liké !')),
+                        );
+                      },
+                    ),
+                  ),
+                );
+              },
+            ),
+          ),
+        ],
       ),
     );
   }
@@ -170,3 +253,6 @@ class AboutPage extends StatelessWidget {
     );
   }
 }
+
+
+
