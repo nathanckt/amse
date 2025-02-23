@@ -3,18 +3,64 @@
       "category": "sabre",
       "name": "Sabre Laser de Luke",
       "description": "L'arme emblématique de Luke Skywalker.",
-      "image": "https://example.com/luke_saber.png"
+      "apparition": "Solo : A Star Wars Story",
+      "utilisateur": "Chewbacca",
+      "image": "assets/sabres/luke_vert.jpg.webp"
     },
     {
       "category": "blaster",
-      "name": "Blaster de Han Solo",
-      "description": "L'arme préférée du contrebandier Han Solo.",
-      "image": "https://example.com/han_blaster.png"
+      "name": "Blaster à répétition FWMB-10",
+      "description": "Egalement appelé le mégablaster, le blaster à répétition FWMB-10 était une arme lourde utilisée par les stormtroopers du Premier Ordre une trentaine d'années après la Bataille d'Endor. L'arme pouvait tirer de nombreux coups par minute.",
+      "apparition": "Episode VII",
+      "utilisateur": "Stromtroopers",
+      "image": "assets/blasters/fwmb10.jpeg"
+    },
+    {
+      "category": "blaster",
+      "name": "Fusil à pompe SX-21",
+      "description": "Le Fusil blaster à pompe SX-21 était une arme fabriquée par Merr-Sonn Munitions. Il était utilisé par certains soldats de l'Empire et notamment par les Mudtroopers sur Mimban en l'an -10. A ce moment là, Chewbacca s'échappa de sa prison dans le camp impérial et s'empara d'un SX-21 qu'il utilisa notamment lors du raid de Kessel pour remplacer son arbalète wookiee.",
+      "apparition": "Solo : A Star Wars Story",
+      "utilisateur": "Chewbacca",
+      "image": "assets/blasters/sx21.jpeg"
+    },
+    {
+      "category": "blaster",
+      "name": "Lance-roquette K21c",
+      "description": "Le lance-roquettes portable K21c était une arme lourde notamment utilisée par Weazel au sein du gang des Cloud Riders, aux alentours de 10 avant la Bataille de Yavin.",
+      "apparition": "Solo : A Star Wars Story",
+      "utilisateur": "Weazel",
+      "image": "assets/blasters/K21C.jpeg"
+    },
+    {
+      "category": "blaster",
+      "name": "Blaster S-5",
+      "description": "Le blaster S-5 était un pistolet utilisé par les forces militaires de Naboo. Il était considéré par les personnes extérieures à Naboo comme une arme classe et raffinée. Les capitaines Quarsh Panaka et Gregar Typho, des forces de sécurités de Naboo utilisaient notamment l'un de ces blasters.",
+      "apparition": "Episode I",
+      "utilisateur": "??",
+      "image": "assets/blasters/S5.png"
+    },
+    {
+      "category": "blaster",
+      "name": "Blaster Defender-5",
+      "description": "Le blaster Defender-5 disposait, comme beaucoup d'armes similaires, d'un mode léthal et d'un mode paralysant. Durant le conflit entre la Résistance et le Premier Ordre, Amilyn Holdo utilisait un blaster de ce type.",
+      "apparition": "Episode VIII",
+      "utilisateur": "Amilyn Holdo",
+      "image": "assets/blasters/defender5.jpeg"
+    },
+    {
+      "category": "blaster",
+      "name": "Carabine blaster EE-3",
+      "description": "La carabine EE-3 était un modèle de fusil blaster fabriqué par BlasTech Industries et utilisé pendant et après la Guerre des Clones par des chasseurs de primes principalement.",
+      "apparition": "Episode V",
+      "utilisateur": "Chasseurs de primes",
+      "image": "assets/blasters/EE3.jpeg"
     },
     {
       "category": "vaisseaux",
       "name": "X-Wing",
       "description": "Chasseur stellaire utilisé par l'Alliance Rebelle.",
+      "apparition": "Solo : A Star Wars Story",
+      "utilisateur": "Chewbacca",
       "image": "https://example.com/xwing.png"
     }
   ]

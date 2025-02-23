@@ -165,111 +165,142 @@ class _ArmsPageState extends State<ArmsPage> {
     });
   }
 
-  @override
-Widget build(BuildContext context) {
-  List<Weapon> filteredWeapons = allWeapons
-      .where((w) => w.category == selectedCategory)
-      .toList();
-
-  if (showOnlyLiked) {
-    filteredWeapons =
-        filteredWeapons.where((w) => widget.likedWeapons.contains(w.name)).toList();
+  void showWeaponDetails(Weapon weapon) {
+    showDialog(
+      context: context,
+      builder: (context) {
+        return AlertDialog(
+          title: Text(weapon.name, style: TextStyle(fontWeight: FontWeight.bold)),
+          content: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              Image.network(weapon.image, width: 200, height: 200, fit: BoxFit.cover),
+              const SizedBox(height: 10),
+              Text("📝 ${weapon.description}", style: TextStyle(fontSize: 14)),
+              const SizedBox(height: 5),
+              Text("🎥 Apparition: ${weapon.apparition}", style: TextStyle(fontWeight: FontWeight.bold)),
+              const SizedBox(height: 5),
+              Text("👤 Utilisé par: ${weapon.utilisateur}", style: TextStyle(fontStyle: FontStyle.italic)),
+            ],
+          ),
+          actions: [
+            TextButton(
+              onPressed: () => Navigator.pop(context),
+              child: Text("Fermer"),
+            ),
+          ],
+        );
+      },
+    );
   }
 
-  return Scaffold(
-    appBar: AppBar(
-      title: const Text("Armes Star Wars"),
-    ),
-    body: Column(
-      children: [
-        Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: ToggleButtons(
-            isSelected: [
-              selectedCategory == 'sabre',
-              selectedCategory == 'blaster',
-              selectedCategory == 'vaisseaux',
-            ],
-            onPressed: (index) {
-              setState(() {
-                selectedCategory = ['sabre', 'blaster', 'vaisseaux'][index];
-              });
-            },
-            children: const [
-              Padding(padding: EdgeInsets.all(8.0), child: Text('Sabres')),
-              Padding(padding: EdgeInsets.all(8.0), child: Text('Blasters')),
-              Padding(padding: EdgeInsets.all(8.0), child: Text('Vaisseaux')),
-            ],
+  @override
+  Widget build(BuildContext context) {
+    List<Weapon> filteredWeapons = allWeapons
+        .where((w) => w.category == selectedCategory)
+        .toList();
+
+    if (showOnlyLiked) {
+      filteredWeapons =
+          filteredWeapons.where((w) => widget.likedWeapons.contains(w.name)).toList();
+    }
+
+    return Scaffold(
+      body: Column(
+        children: [
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: ToggleButtons(
+              isSelected: [
+                selectedCategory == 'sabre',
+                selectedCategory == 'blaster',
+                selectedCategory == 'vaisseaux',
+              ],
+              onPressed: (index) {
+                setState(() {
+                  selectedCategory = ['sabre', 'blaster', 'vaisseaux'][index];
+                });
+              },       
+              selectedColor: Colors.yellow, 
+              color: Colors.white,
+              children: const [
+                Padding(padding: EdgeInsets.all(8.0), child: Text('Sabres')),
+                Padding(padding: EdgeInsets.all(8.0), child: Text('Blasters')),
+                Padding(padding: EdgeInsets.all(8.0), child: Text('Vaisseaux')),
+              ],
+            ),
           ),
-        ),
 
-        
-        Container(
-          padding: const EdgeInsets.symmetric(vertical: 10), 
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              const Text("Afficher les favoris", style: TextStyle(fontSize: 16)),
-              Switch(
-                value: showOnlyLiked,
-                onChanged: (value) {
-                  setState(() {
-                    showOnlyLiked = value;
-                  });
-                },
-              ),
-            ],
-          ),
-        ),
-
-        Expanded(
-          child: filteredWeapons.isEmpty
-              ? const Center(
-                  child: Text(
-                    "Aucune arme trouvée.",
-                    style: TextStyle(fontSize: 18),
-                  ),
-                )
-              : ListView.builder(
-                  itemCount: filteredWeapons.length,
-                  itemBuilder: (context, index) {
-                    final weapon = filteredWeapons[index];
-                    final isLiked = widget.likedWeapons.contains(weapon.name);
-
-                    return Card(
-                      elevation: 4,
-                      margin: const EdgeInsets.symmetric(vertical: 8, horizontal: 16),
-                      child: ListTile(
-                        leading: Image.network(
-                          weapon.image,
-                          width: 60,
-                          height: 60,
-                          fit: BoxFit.cover,
-                        ),
-                        title: Text(
-                          weapon.name,
-                          style: const TextStyle(fontWeight: FontWeight.bold),
-                        ),
-                        subtitle: Text(weapon.description),
-                        trailing: IconButton(
-                          icon: Icon(
-                            isLiked ? Icons.favorite : Icons.favorite_border,
-                            color: isLiked ? Colors.red : null,
-                          ),
-                          onPressed: () {
-                            widget.onLikeToggle(weapon.name);
-                          },
-                        ),
-                      ),
-                    );
+          Container(
+            padding: const EdgeInsets.symmetric(vertical: 10), 
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                const Text("Afficher les favoris", style: TextStyle(fontSize: 16)),
+                Switch(
+                  value: showOnlyLiked,
+                  onChanged: (value) {
+                    setState(() {
+                      showOnlyLiked = value;
+                    });
                   },
                 ),
-        ),
-      ],
-    ),
-  );
+              ],
+            ),
+          ),
+
+          Expanded(
+            child: filteredWeapons.isEmpty
+                ? const Center(
+                    child: Text(
+                      "Aucune arme trouvée.",
+                      style: TextStyle(fontSize: 18),
+                    ),
+                  )
+                : ListView.builder(
+                    itemCount: filteredWeapons.length,
+                    itemBuilder: (context, index) {
+                      final weapon = filteredWeapons[index];
+                      final isLiked = widget.likedWeapons.contains(weapon.name);
+
+                      return Card(
+                        elevation: 4,
+                        margin: const EdgeInsets.symmetric(vertical: 8, horizontal: 16),
+                        child: ListTile(
+                          leading: Image.network(
+                            weapon.image,
+                            width: 60,
+                            height: 60,
+                            fit: BoxFit.cover,
+                          ),
+                          title: Text(
+                            weapon.name,
+                            style: const TextStyle(fontWeight: FontWeight.bold),
+                          ),
+                          subtitle: Text(weapon.description),
+                          trailing: IconButton(
+                            icon: Icon(
+                              isLiked ? Icons.favorite : Icons.favorite_border,
+                              color: isLiked ? Colors.red : null,
+                            ),
+                            onPressed: () {
+                              widget.onLikeToggle(weapon.name);
+                            },
+                          ),
+                          onTap: () {
+                            showWeaponDetails(weapon);
+                          },
+                        ),
+                      );
+                    },
+                  ),
+          ),
+        ],
+      ),
+    );
+  }
 }
-}
+
 
 
 class AboutPage extends StatelessWidget {
