@@ -1,11 +1,75 @@
 [
     {
       "category": "sabre",
-      "name": "Sabre Laser de Luke",
-      "description": "L'arme emblématique de Luke Skywalker.",
-      "apparition": "Solo : A Star Wars Story",
-      "utilisateur": "Chewbacca",
-      "image": "assets/sabres/luke_vert.jpg.webp"
+      "name": "Le Ren",
+      "description": "Le Ren était le nom donné à un sabre laser à lame rouge utilisé par un guerrier du Côté Obscur connu lui aussi sous le pseudonyme de Ren. Ce dernier dirigeait un groupe de guerriers obscurs, les Chevaliers de Ren. Selon son propriétaire, le Ren incarnait leur idéologie, ne se préoccupant pas des notions futiles qu’étaient le bien et le mal : le sabre se contentait de tout consumer selon la volonté de son utilisateur. Il en était de même pour les Chevaliers qui se laissaient porter par le Côté Obscur de la Force. Ren utilisa ce sabre laser particulier à maintes reprises et notamment pour affronter Luke Skywalker sur Elphrona ou encore Ben Solo sur la Lune minière de Mimban. D’ailleurs, au terme de ce combat, Ben Solo terrassa Ren et, récupérant l’arme, utilisa le cristal rouge afin de se confectionner son propre sabre laser.",
+      "apparition": "L'Ascension de Kylo Ren [#1-4]",
+      "utilisateur": "Ren",
+      "image": "assets/sabres/Ren.png"
+    },
+    {
+      "category": "sabre",
+      "name": "Sabre Laser de l'Inquisiteur",
+      "description": "À l'image du sabre laser de Dark Maul, le sabre laser de l'Inquisiteur était un sabre laser à double lame. Selon le choix de son utilisateur, une ou deux lames pouvaient être utilisées durant un combat. De plus, le sabre laser pouvait être enclenché de telle sorte que les deux lames tournent autour du manche. Ainsi, lorsqu'une cible s'écartait d'un face à face, l'Inquisiteur avait pour habitude de lancer son sabre afin de faire le maximum de dégâts sur la cible fuyante.",
+      "apparition": "Au secours des anciens Maîtres - Rebels [S01-E03]",
+      "utilisateur": "L'Inquisiteur",
+      "image": "assets/sabres/sabreinquisiteur.png"
+    },
+    {
+      "category": "sabre",
+      "name": "Sabre Laser de Kanan Jarrus",
+      "description": "Construite quelques temps avant la chute de la République Galactique, cette arme appartenait au Padawan Caleb Dume et symbolisait son appartenance à l'Ordre Jedi. Ce sabre laser permis à son propriétaire de défendre sa vie à de multiples occasions durant la guerre des clones jusqu'à la bataille de Kaller au cours de laquelle l'Ordre 66 fut déclenché.Caleb Dume fut alors contraint de se terrer et d'oublier son existence de Jedi, à présent que l'Empire Galactique, nouvellement proclamé s'était donné pour objectif d'éradiquer tous les utilisateurs de la Force. \n Caleb prit le nom de Kanan Jarrus et modifia son sabre laser pour en faire une arme démontable, en deux parties. En effet, grâce à cela, il réussit à ne pas se faire repérer alors qu'il portait en permanence son sabre laser à sa ceinture.\nCe n'est que 14 ans après la déclaration de l'Ordre 66 et l'apparition de l'Empire qu'il utilisa pour la première fois son sabre laser. Ce fut sur Kessel, lors d'une mission de secours, où il sauva d'ailleurs de nombreuses vies wookiees, qu'il dégaina son arme. Par la même occasion, il révéla au grand jour sa vraie nature, et Kallus, l'agent impérial lui faisant face, s'empressa de signaler le Jedi auprès de l'Inquisiteur, un chasseur de Jedi engagé par Dark Vador. Cet événement marqua le début de l'implication de l'ancien Jedi dans une Rébellion à plus grande échelle contre l'Empire.",
+      "apparition": "Prémices d'une Rébellion - Rebels [S01-E00]",
+      "utilisateur": "Kanan Jarrus",
+      "image": "assets/sabres/Kanan_sabre.png"
+    },
+    {
+      "category": "sabre",
+      "name": "Électro-bisento",
+      "description": "Les Électro-Bisento étaient des armes particulières utilisées par les Gardes Prétoriens du Suprême Leader Snoke. Elles se présentaient sous la forme de courtes lances, dotées d’une fine lame alimentée par un générateur ultrasonique qui émettait des vibrations le long du tranchant de l’acier. Bien évidemment, ces armes étaient résistantes aux sabre laser car équipées d’un filament électro-plasmique parallèle à la lame.\nCette capacité à bloquer la lame des sabres laser fut démontrée en l’an 34 lorsque les Gardes Prétoriens affrontèrent Kylo Ren et Rey à bord du Suprématie, dans la salle du trône de Snoke juste après l’assassinat de ce dernier. A ce moment, un seul  garde maniaient l’électro-bisento à une main afin d’augmenter la précision de ses mouvements. Mais malgré sa dextérité, il fut tué, comme tous les membres de l’élite prétorienne, par les deux utilisateurs de la Force.",
+      "apparition": "Gardes Prétoriens",
+      "utilisateur": "Episode VIII - Les Derniers Jedi",
+      "image": "assets/sabres/Bisento.jpeg"
+    },
+    {
+      "category": "sabre",
+      "name": "Fouet-Laser",
+      "description": "Le Fouet-Laser était une arme proche de sabre laser qui, au lieu d’avoir un lame fixe, possédait un faisceau d’énergie flexible lui permettant d’être utilisé comme un fouet.\nSelon le témoignage laissé par la Jedi Cervil la Mystérieuse, cette arme avait été utilisée par les Jedi à l’époque des Guerres Sith pour contrer les formes de combat interdites utilisées par leurs adversaires. Le Fouet-Laser faisait également partie de l’arsenal traditionnel des Sœurs de la Nuit.",
+      "apparition": "??",
+      "utilisateur": "Soeurs de la nuit, Sith",
+      "image": "assets/sabres/fouetlaser.jpeg"
+    },
+    {
+      "category": "sabre",
+      "name": "Sabre Laser des Skywalker",
+      "description": "Le sabre-laser dit 'des Skywalker' était le deuxième sabre fabriqué par Anakin Skywalker durant la Guerre des Clones. Après avoir perdu son premier dans les fonderies de Géonosis, il s'en fabriqua un nouveau. Celui-ci était de facture très proche du précédent, avec sa poignée lisse et chromée et sa lame bleue (dont la longueur pouvait être ajustée).\nAnakin s'en servit durant toute la Guerre des Clones. Bien que devenu Dark Vador en jurant allégeance à Dark Sidious, il continua à l'utiliser pendant l'attaque du Temple Jedi, massacrant lui-même nombre de Jedi et de Padawans. Un peu plus tard, ce sont les leaders Séparatistes qui furent abattus par sa lame. Lors de son duel contre son ancien Maître Obi-Wan Kenobi, il fut laissé pour mort sur Mustafar et ce dernier emporta le sabre avec lui.\nQuelques 20 ans plus tard, Obi-Wan confia le sabre à Luke, le fils d'Anakin, lorsqu'il commença à le former comme Jedi. C'est avec celui-ci que le jeune homme s'entraîna sur Dagobah avec Yoda, puis qu'il affronta son père sur Bespin, duel lors duquel il perdit sa main et l'arme.\nDe manière encore mystérieuse, le sabre fut récupéré dans les conduits de ventilation de la Cité et finit en possession de Maz Kanata, sur Takodana. En +34, Rey, une jeune pilleuse d'épaves anonyme, le découvrit et, à son contact, eut une terrible vision. Bien que Maz tenta de la convaincre de prendre le sabre, elle refusa, et Maz le confia alors à son ami Finn. Un peu plus tard, sur la Base Starkiller, les deux jeunes gens affrontèrent tour à tour Kylo Ren en s'en servant, Rey parvenant à blesser son adversaire.\nAyant accepté sa destinée, la jeune femme partit ensuite pour Ahch-To, où elle retrouva Luke Skywalker et lui rendit son sabre. Mais celui-ci le jeta, refusa de former la jeune femme. Elle s'entraîna alors seule au sabre, puis s'en servit contre le vieux maître pour lui faire avouer l'histoire de Ben Solo. Quelques leçons en poche, elle partit ensuite rencontrer ce dernier et affronter Snoke à bord du Supremacy. Au cours de la confrontation, Ben manipula le sabre par la Force et s'en servit pour tuer son maître. Un combat s'engagea alors contre les gardes prétoriens, combat lors duquel Rey manipulait le sabre avec aisance. A la fin de la bataille, les deux jeunes alliés de circonstances tentèrent tout deux de s'emparer du sabre, lequel se brisa en deux. Fuyant le vaisseau, la jeune femme emporta les morceaux avec elle sur Crait.",
+      "apparition": "Episode II",
+      "utilisateur": "Anakin Skywalker, Luke Skywalker, Finn, Rey",
+      "image": "assets/sabres/sabre_skywalker.jpeg"
+    },
+    {
+      "category": "sabre",
+      "name": "Sabre Noir",
+      "description": "Ce sabre laser unique avait la particularité de posséder une lame effilée énergétique noire. Il fut créé sous l’Ancienne République par le premier Mandalorien Jedi de l’histoire, Tarre Vizsla et devint par la suite le symbole de ralliement et de puissance de la maison Vizsla. A la mort de son créateur, le Sabre Noir fut gardé dans le Temple Jedi, mais les membres de la maison Vizsla le récupérèrent. Ainsi il fut transmit de générations en générations jusqu'à arriver entre les mains de Pre Vizsla.\nDurant la guerre des clones, ce dernier se trouvait à la tête de l'organisation dissidente de la Death Watch. Il s'allia alors aux séparatistes menés par Dooku et, armé du Sabre Noir, Pre Vizsla affronta notamment les Jedi Obi-Wan Kenobi et Ahsoka Tano. En -20, il rejoignit le Collectif des Ombres formé par Dark Maul afin de conquérir Mandalore. Toutefois, il finit par trahir le Sith et au terme d'un duel au sabre laser, Pre Vizsla vut vaincut. Dark Maul devint alors le nouveau propriétaire du Sabre Noir.\nL'arme resta de nombreuses années en possession du Sith : il l'utilisa notamment jusqu'à la fin de la guerre des clones contre son ancien mentor Dark Sidious (venu mettre un terme à ses agissements qui perturbaient ses propres plans) et Grievous. \nCe n'est que des années plus tard, aux alentours de l'an -2 que le Sabre Noir retourna entre des mains mandaloriennes : Sabine Wren s'empara de l'arme dans la tanière du Sith sur Dathomir et se servit de ce symbole pour rassembler les familles de Mandalore. Ainsi unis, les différents clans affrontèrent l'Empire et Sabine confia alors le Sabre à Bo-Katan Kryze, soeur de la Duchesse Satine ayant régné des années plus tôt. En acceptant ce présent, Bo-Katan se voyait attribuer un lourd fardeau : celui de diriger les familles mandaloriennes.\nPar la suite, l'Empire ne pouvant tolérer une telle insurrection de la part du peuple Mandalorien, décida de procéder à une purge, de les exterminer, et y arriva presque. 9 ans après la bataille de Yavin, plusieurs années après la chute de l'Empire donc, Bo-Katan avait déjà perdu le Sabre Noir qui était utilisé alors par le mystérieux Moff Gideon, le dirigeant d’un des nombreux groupes d'impériaux subsistants.\nA cette période, Bo-Katan cherchait par tous les moyens à reprendre son bien. C’est à cette occasion qu’elle rencontra Din Djarin sur la lune Trask. Après quelques échanges houleux, Djarin aida Bo-Katan et ses Nite Owls à aborder un vaisseau impérial afin de faire parler l’équipage et de trouver la localisation de Gideon.",
+      "apparition": "Le Complot de Mandalore - TCW [S02-E12]",
+      "utilisateur": "Tarre Vizsla, Pre Vizsla, Dark Maul, Sabine Wren, Bo-Katan Kryze, Gideon",
+      "image": "assets/sabres/Sabrenoir.jpeg"
+    },
+    {
+      "category": "sabre",
+      "name": "Sabre laser de Ki-Adi-Mundi",
+      "description": "Ce sabre laser à lame bleue était l'arme du Maître Jedi Céréen Ki-Adi-Mundi. À la mort de ce dernier sur Mygeeto lors de l'exécution de l'Ordre 66, l'arme fut récupérée par les locaux et conservée précieusement de nombreuses années. Un jour, le chasseur de primes Greedo attaqua les locaux du vice-président Anolo afin de capturer un crauqueur de codes Givin pour le compte de Jabba. Le Rodien en profita pour voler le sabre laser.\nLorsqu'il fit son rapport à Jabba, admettant que le Givin avait été tué, Greedo essaya de consoler le Hutt en lui montrant le sabre laser. L'objet n'intéressait pas Jabba, mais Dok-Ondar, qui se trouvait sur Tatooine, racheta l'arme pour de nombreux crédits. Le sabre laser fut alors exposé dans son magasin d'antiquités sur Batuu.\nPlus de trente ans plus tard, un contingent de soldats du Premier Ordre mit en garde Dok-Ondar sur la possession d'une telle arme, ce qui allait bientôt être considéré comme un crime. Peu de temps après, la contrebandière Kendoh utilisa le sabre laser de Mundi pour quitter le magasin d'antiquités de Dok-Ondar et échapper au Premier Ordre.",
+      "apparition": "Exécution de l’ordre 66 : début de la grande purge",
+      "utilisateur": "Ki-Adi-Mundi",
+      "image": "assets/sabres/sabre_mundi.jpeg"
+    },
+    {
+      "category": "sabre",
+      "name": "Sabre Laser d'Ezra Bridger",
+      "description": "Ezra Bridger a construit son propre sabre laser en l'an -4. C'était un sabre laser fabriqué avec les moyens du bord, faisait également office de blaster. Bien que grossier, ce type de construction fut choisi en fonction de l'environnement. En effet, durant ces années de guerres civiles et de résistance, Ezra ne pouvait se contenter de porter un sabre laser à usage unique. Surtout, il était beaucoup plus à l'aise avec blaster qu'avec un sabre laser, n'étant que padawan et ne connaissant la Force que depuis quelques semaines. Il put le construire grâce à divers objets retrouvés dans le Ghost, après avoir récupéré un crystal Kyber dans le temple Jedi caché de Lothal.",
+      "apparition": "Ezra Bridger",
+      "utilisateur": "L'Épreuve du Jedi - Rebels [S01-E08]",
+      "image": "assets/sabres/ezra_sabrelaser.png"
     },
     {
       "category": "blaster",
@@ -56,12 +120,100 @@
       "image": "assets/blasters/EE3.jpeg"
     },
     {
+      "category": "blaster",
+      "name": "Fusil à concussion LJ-50",
+      "description": "Le fusil à concussion LJ-50 était un fusil trandoshan utilisé à l’époque de la Guerre des Clones. Relativement lourd, il était muni d’une poignée supplémentaire afin de le porter plus efficacement. Ses munitions explosaient à l’impact, causant des dégâts dans un rayon de 4 mètres. Bien que l’arme soit d’origine trandoshan, elle était prisée des commandos clones. La générale Jedi Etain Tur-Mukan en gardait toujours un sur elle suite à une mission commune avec l’escouade Omega sur Qiilura.",
+      "apparition": "Opération de l'Escouade Omega sur Qiilura",
+      "utilisateur": "Clone",
+      "image": "assets/blasters/lj50.png"
+    },
+    {
+      "category": "blaster",
+      "name": "Fusil Blaster A-300",
+      "description": "Le fusil blaster A-300 était un fusil couramment utilisé par les soldats de l'Alliance Rebelle, en particulier lors de la bataille de Scarif. Certaines organisations criminelles telles que le Syndicat Pyke sur Kessel en utilisait également car ces armes étaient fiables et peu chères à remplacer.",
+      "apparition": "Opération de l'Escouade Omega sur Qiilura",
+      "utilisateur": "Rogue One",
+      "image": "assets/blasters/A300.jpeg"
+    },
+    {
+      "category": "blaster",
+      "name": "Fusil Blaster E-10R",
+      "description": "Le Fusil blaster E-10R était une arme conçue par Blastech Industries et équipant notamment les Range Troopers de l'Empire. Plus robuste que la version E-11, il était notamment équipée de stabilisateur amélioré et d'un électroscope infrarouge, et était ainsi particulièrement adapté aux environnements reculés voir extrêmes où opéraient les Range Troopers, affectés par exemple à la défense du Conveyex sur Vandor-1.",
+      "apparition": "Solo: A Star Wars Story",
+      "utilisateur": "Range Troopers",
+      "image": "assets/blasters/blaster-E10R.png"
+    },
+    {
       "category": "vaisseaux",
-      "name": "X-Wing",
-      "description": "Chasseur stellaire utilisé par l'Alliance Rebelle.",
-      "apparition": "Solo : A Star Wars Story",
-      "utilisateur": "Chewbacca",
-      "image": "https://example.com/xwing.png"
+      "name": "Bongo",
+      "description": "Le Bongo est un modèle de sous-marin en usage dans la cité submergée d’Otoh Gunga. D’apparence presque organique, ce petit appareil peut accueillir trois passagers.",
+      "apparition": "Episode II",
+      "utilisateur": "Gungans",
+      "image": "assets/vaisseaux/bongo.jpeg"
+    },
+    {
+      "category": "vaisseaux",
+      "name": "MG-100 StarFortress",
+      "description": "Le MG-11 Starfortress était un bombardier lourd utilisé par la Résistance, d'où sa dénomination inofficielle de bombardier de la Résistance.\nConçu par Slan & Korpil vers la fin de la guerre entre l'Empire et la Rébellion, il fut utilisé comme cargo civil durant la période de paix qui suivit, et il était toujours en service une trentaine d'années plus tard lorsque les affrontements reprirent.\nDe près de 30 mètres de long pour 20 de haut, son équipage complet était composé d'un pilote, deux cannoniers, un ingénieur de vol et un bombardier. Outre ses six canons lasers frontaux et ses deux tourelles situées à l'arrière et à la base, le MG-11 disposait d'une large soute pouvant embarquer jusqu'à un millier de bombes à protons qui pouvaient être larguées sur n'importe quel objectif, même dans l'espace grâce à des impulsions magnétiques.\nEn 34 après la bataille de Yavin, la Résistance disposait de deux escadrons de bomardiers, l'escadron Cobalt et l'escadron Crimson. Cependant l'ensemble de ces appareils furent détruits par le Premier Ordre lors de l'évacuation de D'Qar, non sans avoir eu leur court moment de gloire en détruisant le cuirassé Fulminatrix.",
+      "apparition": "Episode VIII",
+      "utilisateur": "Résitance, Alliance Cobalt",
+      "image": "assets/vaisseaux/mg100.jpeg"
+    },
+    {
+      "category": "vaisseaux",
+      "name": "Navette classe Lambda T-4a",
+      "description": "La navette de classe Lambda T-4a, plus connue sous le simple terme de navette Lambda, était le modèle de navette de transport le plus courant de la flotte impériale. Elle était dotée de trois ailes, une dorsale et deux latérales repliables à l’arrêt pour ne pas gêner l’atterrissage et pour prendre moins de place.\nContrairement aux chasseurs TIE, les navettes Lambda disposaient d’un moteur hyperdrive leur permettant de se déplacer en hyperespace. De fait, bien qu’il soit possible de la piloter seul, un copilote rendait la chose plus facile.\nComme elles transportaient beaucoup de soldats, les navettes sentaient souvent mauvais, du fait de la transpiration des individus. Certains soldats, pour tuer le temps ou laisser une trace avant un combat potentiellement mortel, gravaient leur numéro de matricule sur les sièges et les parois.",
+      "apparition": "Episode IV",
+      "utilisateur": "Empire Galactique",
+      "image": "assets/vaisseaux/Lambda.jpeg"
+    },
+    {
+      "category": "vaisseaux",
+      "name": "Nef Royale Type J-327",
+      "description": "Durant l'invasion de Naboo par la Fédération du Commerce, la Reine Amidala et sa cour s'échappèrent à bord de la Nef Royale. Pilotée par Ric Olié, la navette évita de peu le blocus de la Fédération du Commerce. Elle subit cependant des dommages à son bouclier déflecteur et à son hyperdrive, bien que celui-ci ait été brièvement réparé par le contingent de droïds du vaisseau.\nAvec cette réparation de fortune, le vaisseau réussi à rejoindre Tatooine, où un Hyperdrive T-14 de remplacement put être trouvé.\nDe nombreuses années plus tard, cette nef royale était conservée par l'Empereur Palpatine au sein de son Palais sur Coruscant. Il enfit alors don à Dark Vador après que ce dernier eut éliminé le Jedi Eeth Koth, en sachant que cela lui rappellerait son passé.\nVador l'utilisa alors pour se rendre sur Mustafar et s'y faire bâtir une forteresse. Le vaisseau subit d'importants dommages lors de son entrée dans l'atmosphère de la planète volcanique, Vaodr refusant l'utilisation des boucliers, mais resta néanmoins en état de fonctionnement.",
+      "apparition": "Episode I",
+      "utilisateur": "Reine Amidala, Dark Vador",
+      "image": "assets/vaisseaux/nef_royale.jpeg"
+    },
+    {
+      "category": "vaisseaux",
+      "name": "Red Ace",
+      "description": "Le Red Ace était un vaisseau appartenant à Freya Fenris. Cette dernière avait notamment conçu son design harmonieux afin d'optimiser ses capacités et sa précision. En plus de son endurance, le vaisseau était doté d'une technologie de pointe qui lui conférait un équilibre parfait entre vitesse, puissance et accélération. Freya avait également monté quatres canons lasers (deux sur chaque aile et deux à l'avant) sur son vaisseau afin de se défendre si le besoin se faisait sentir.\nEn l'an +34, Freya Fenris et le Red Ace appartenaient à l'Cercle des As, en poste à la Station Colossus sur la planète Castilon. Les pilotes y avaient l'habitude de se défier lors de courses amicales afin de prouver qu'ils étaient les meilleurs pilotes de la galaxie.\nA bord du Red Ace, Freya affronta les forces du Premier Ordre après que l’organisation ait pris possession de la planète. Après avoir éliminé plusieurs TIE, un Star Destroyer ennemi arriva à proximité du Colossus et se mit à bombarder la station. Les pilotes du Cercle des As se réfugièrent alors à l’intérieur de la station. Celle-ci, qui s’avérait en fait être un vaisseau, venait d’être sortie de l’eau par Neeku Vozo. Une fois tout le monde à l’abri, il fit passer le Colossus en hyperespace. Ses résidents s’éloignaient du Premier Ordre, mais ne savaient pas où ils se dirigeaient…",
+      "apparition": "La recrue - Resistance [S01E01]",
+      "utilisateur": "Freya Fenris",
+      "image": "assets/vaisseaux/Red.jpeg"
+    },
+    {
+      "category": "vaisseaux",
+      "name": "TIE Silencer",
+      "description": "Conçu comme étant le digne successeur du TIE avancé x1 utilisé par Dark Vador pendant la Guerre Civile Galactique bien des années auparavant, le chasseur TIE/ vn superiority, plus connu sous le nom de TIE Silencer était le chasseur personnel de Kylo Ren plus de 30 ans après la bataille d’Endor. En effet, ce dernier avait hérité des dons de pilotage de sa famille et volait donc aux commandes de l’unique prototype mis en service par Sienar Fleet Systems.  Régulièrement, il faisait des rapports détaillés aux ingénieurs et émettait des suggestions afin d’améliorer les capacités du chasseur au combat.\nPeu après la défaite du Premier Ordre lors de la destruction de la Base Starkiller, Kylo Ren utilisa son TIE Silencer pour traquer les croiseurs de la Résistance. Aux commandes de quelques chasseurs, Kylo pilonna les vaisseaux ennemis, démontrant toute la maniabilité et la puissance de destruction du prototype. Si Kylo hésita à tirer sur le pont du vaisseau amiral le Raddus, où se trouvait sa mère, la Princesse Leia Organa, il se fraya un chemin jusqu’au hangar principal du croiseur où il largua plusieurs torpilles, détruisant tous les chasseurs de la Résistance avant même que les pilotes ne soient prêts à décoller pour affronter le Premier Ordre…",
+      "apparition": "Episode VIII",
+      "utilisateur": "Kylo Ren",
+      "image": "assets/vaisseaux/Silencer.png"
+    },
+    {
+      "category": "vaisseaux",
+      "name": "X-Wing T-70",
+      "description": "Comme son ancêtre T-65, le T-70 possédait des ailes cruciformes disposant d’un canon laser à chaque extrémité, et un long nez abritant les senseurs ainsi qu’un lance-projectiles pouvant être équipé de torpilles à protons, de missiles à concussion ou d’autres armes secondaires. Il innovait toutefois avec la présence d’un canon blaster orientable sous la carlingue, déployable lorsque l’appareil était au sol.\nAutre évolution, les quatre réacteurs cylindriques accrochés aux ailes du T-65 furent remplacés par des moteurs scindés semi-cylindriques, qui rapprochaient la silhouette du T-70 de celle de son ancêtre, le Z-95 Headhunter, quand il n'était pas en position d’attaque. D’autre part, les ailes du T-70, plus fines que celles du T-65, étaient en ciseaux : elles ne se repliaient pas l’une sur l’autre mais l’une à côté de l’autre.\nLe monoplace T-70 disposait également d’un générateur hyperdrive, d’un slot d’accueil pour droïde astromech et d’un système d’éjection pour le pilote.",
+      "apparition": "Episode VII",
+      "utilisateur": "Résistance",
+      "image": "assets/vaisseaux/t70.jpeg"
+    },
+    {
+      "category": "vaisseaux",
+      "name": "U-Wing UT-60D",
+      "description": "Le UT-60D est un vaisseau polyvalent assemblé par Incom Corporation sous l'ère impériale. Bien qu'il appartienne à la catégorie des chasseurs, le U-Wing est structurellement plus proche d'un vaisseau de transport léger. Il peut effectivement transporter jusqu'à huit passagers, ce qui le rend très attractif pour les raids des forces spéciales. L'armement est limité et ne convient qu'aux affrontements entre chasseurs ; des tourelles anti-infanterie peuvent toutefois être installées sur les sas lors des opérations atmosphériques.",
+      "apparition": "Rogue One",
+      "utilisateur": "Alliance Rebelle",
+      "image": "assets/vaisseaux/u-wing.png"
+    },
+    {
+      "category": "vaisseaux",
+      "name": "A-Wing RZ-1",
+      "description": "A l'époque du 'plus terrible des conflits', l'Alliance Rebelle, prévoyant une bataille importante, voire finale, décida de la conception de nouveaux appareils pour renforcer et surtout rajeunir sa flotte grandissante mais vieillissante. Le RZ-1 A-Wing est un de ces projets mais ce n'est pas le seul (par exemple le B-Wing).\nDe par sa jeunesse, le A-Wing n'est visible que dans 'Le Retour du Jedi', notamment lors du rassemblement de la flotte avant le briefing de l'Amiral Ackbar et avant le passage de toute les unités en hyperespace vers la seconde Etoile Noire, ainsi que durant toute la bataille d'Endor ou enfin dans la structure même de l'Etoile de la Mort.\nMais c'est avec l'Executor qu'ils s'illustrent le plus car c'est bien un trio de ces appareils qui est à l'origine de sa destruction. En effet, après la destruction d'un générateur de bouclier par un duo d'A-Wing, le super destroyer stellaire de Dark Vador n'avait plus d'écran de protection et un troisième appareil (piloté par Arvel Crynyd) en très mauvaise posture, en percutant la passerelle, achève l'oeuvre de ces deux coéquipiers débarrassant ainsi la galaxie du plus gros destroyer permettant l'oppression impériale.",
+      "apparition": "Fin de la Première Guerre Civile Galactique",
+      "utilisateur": "Alliance Rebelle, Nouvelle République",
+      "image": "assets/vaisseaux/a-wing.jpeg"
     }
   ]
   

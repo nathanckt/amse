@@ -124,12 +124,29 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(title: Text("Accueil")),
       body: Center(
-        child: Column(
-          mainAxisSize: MainAxisSize.min, 
-          children: [
-            Text("Coucou"),
-          ],
+        child: Padding(
+          padding: const EdgeInsets.all(16.0),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Image.asset("assets/hero.webp", width: 300),
+              SizedBox(height: 20),
+              Text(
+                "Bienvenue sur cette application",
+                style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+                textAlign: TextAlign.center,
+              ),
+              SizedBox(height: 10),
+              Text(
+                "Vous allez pouvoir découvrir sur cette application les différentes armes utilisées dans l'univers Star Wars",
+                style: TextStyle(fontSize: 16),
+                textAlign: TextAlign.center,
+              ),
+              SizedBox(height: 30),
+            ],
+          ),
         ),
       ),
     );
@@ -167,31 +184,34 @@ class _ArmsPageState extends State<ArmsPage> {
 
   void showWeaponDetails(Weapon weapon) {
     showDialog(
-      context: context,
-      builder: (context) {
-        return AlertDialog(
-          title: Text(weapon.name, style: TextStyle(fontWeight: FontWeight.bold)),
-          content: Column(
-            mainAxisSize: MainAxisSize.min,
-            children: [
-              Image.network(weapon.image, width: 200, height: 200, fit: BoxFit.cover),
-              const SizedBox(height: 10),
-              Text("📝 ${weapon.description}", style: TextStyle(fontSize: 14)),
-              const SizedBox(height: 5),
-              Text("🎥 Apparition: ${weapon.apparition}", style: TextStyle(fontWeight: FontWeight.bold)),
-              const SizedBox(height: 5),
-              Text("👤 Utilisé par: ${weapon.utilisateur}", style: TextStyle(fontStyle: FontStyle.italic)),
-            ],
-          ),
-          actions: [
-            TextButton(
-              onPressed: () => Navigator.pop(context),
-              child: Text("Fermer"),
-            ),
+  context: context,
+  builder: (context) {
+    return AlertDialog(
+      title: Text(weapon.name, style: TextStyle(fontWeight: FontWeight.bold)),
+      content: SingleChildScrollView(
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            Image.network(weapon.image, width: 200, height: 200, fit: BoxFit.cover),
+            const SizedBox(height: 10),
+            Text("Description: ${weapon.description}", style: TextStyle(fontSize: 14, color: Colors.black)),
+            const SizedBox(height: 5),
+            Text("Première Apparition: ${weapon.apparition}", style: TextStyle(fontWeight: FontWeight.bold, color: Colors.black)),
+            const SizedBox(height: 5),
+            Text("Utilisé par: ${weapon.utilisateur}", style: TextStyle(fontStyle: FontStyle.italic, color: Colors.black)),
           ],
-        );
-      },
+        ),
+      ),
+      actions: [
+        TextButton(
+          onPressed: () => Navigator.pop(context),
+          child: Text("Fermer"),
+        ),
+      ],
     );
+  },
+);
+
   }
 
   @override
@@ -277,7 +297,12 @@ class _ArmsPageState extends State<ArmsPage> {
                             weapon.name,
                             style: const TextStyle(fontWeight: FontWeight.bold),
                           ),
-                          subtitle: Text(weapon.description),
+                          subtitle: Text(
+                            weapon.description.length > 40
+                                ? weapon.description.substring(0, 40) + '...'  
+                                : weapon.description, 
+                            overflow: TextOverflow.ellipsis, 
+                          ),
                           trailing: IconButton(
                             icon: Icon(
                               isLiked ? Icons.favorite : Icons.favorite_border,
@@ -307,14 +332,30 @@ class AboutPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(
+      appBar: AppBar(title: Text("À propos")),
+      body: Center( // Ajout de Center pour centrer verticalement
+      child: Padding(
+        padding: const EdgeInsets.all(16.0),
         child: Column(
-          mainAxisSize: MainAxisSize.min, // Pour centrer la colonne verticalement
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          mainAxisSize: MainAxisSize.min, // Permet d'éviter un espace trop grand
           children: [
-            Text("C'est mwaaa"),
+            Text(
+              "À propos de l'application",
+              style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+              textAlign: TextAlign.center,
+            ),
+            SizedBox(height: 20),
+            Text(
+              "Cette application a été codée par Yoda en Flutter. Elle vous permet de découvrir les différentes armes utilisées dans l'univers Star Wars.",
+              style: TextStyle(fontSize: 16),
+              textAlign: TextAlign.center,
+            ),
           ],
         ),
       ),
+    )
     );
   }
 }
