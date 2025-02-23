@@ -52,23 +52,17 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   var selectedIndex = 0;
+  Set<String> likedWeapons = {};
 
-  static const TextStyle optionStyle =
-      TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
-  static const List<Widget> _widgetOptions = <Widget>[
-    Text(
-      'Index 0: Home',
-      style: optionStyle,
-    ),
-    Text(
-      'Index 1: Business',
-      style: optionStyle,
-    ),
-    Text(
-      'Index 2: School',
-      style: optionStyle,
-    ),
-  ];
+  void toggleLike(String weaponName) {
+    setState(() {
+      if (likedWeapons.contains(weaponName)) {
+        likedWeapons.remove(weaponName);
+      } else {
+        likedWeapons.add(weaponName);
+      }
+    });
+  }
 
 
   void _onItemTapped(int index) {
@@ -86,7 +80,7 @@ class _MyHomePageState extends State<MyHomePage> {
         page = HomePage();
         break;
       case 1:
-        page = ArmsPage();
+        page = ArmsPage(likedWeapons: likedWeapons, onLikeToggle: toggleLike);
         break;
       case 2:
         page = AboutPage();
@@ -126,14 +120,13 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 }
 
-
 class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
         child: Column(
-          mainAxisSize: MainAxisSize.min, // Pour centrer la colonne verticalement
+          mainAxisSize: MainAxisSize.min, 
           children: [
             Text("Coucou"),
           ],
@@ -142,7 +135,13 @@ class HomePage extends StatelessWidget {
     );
   }
 }
+
 class ArmsPage extends StatefulWidget {
+  final Set<String> likedWeapons;
+  final Function(String) onLikeToggle;
+
+  const ArmsPage({Key? key, required this.likedWeapons, required this.onLikeToggle}) : super(key: key);
+
   @override
   State<ArmsPage> createState() => _ArmsPageState();
 }
@@ -150,6 +149,7 @@ class ArmsPage extends StatefulWidget {
 class _ArmsPageState extends State<ArmsPage> {
   List<Weapon> allWeapons = [];
   String selectedCategory = 'sabre';
+  bool showOnlyLiked = false; 
 
   @override
   void initState() {
@@ -166,77 +166,111 @@ class _ArmsPageState extends State<ArmsPage> {
   }
 
   @override
-  Widget build(BuildContext context) {
-    List<Weapon> filteredWeapons =
-        allWeapons.where((w) => w.category == selectedCategory).toList();
+Widget build(BuildContext context) {
+  List<Weapon> filteredWeapons = allWeapons
+      .where((w) => w.category == selectedCategory)
+      .toList();
 
-    return Scaffold(
-      appBar: AppBar(
-        title: Text("Armes Star Wars"),
-      ),
-      body: Column(
-        children: [
-          // Catégories avec TabBar
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: ToggleButtons(
-              isSelected: [
-                selectedCategory == 'sabre',
-                selectedCategory == 'blaster',
-                selectedCategory == 'vaisseaux',
-              ],
-              onPressed: (index) {
-                setState(() {
-                  selectedCategory = ['sabre', 'blaster', 'vaisseaux'][index];
-                });
-              },
-              children: const [
-                Padding(padding: EdgeInsets.all(8.0), child: Text('Sabres')),
-                Padding(padding: EdgeInsets.all(8.0), child: Text('Blasters')),
-                Padding(padding: EdgeInsets.all(8.0), child: Text('Vaisseaux')),
-              ],
-            ),
-          ),
-
-          // Liste des armes
-          Expanded(
-            child: ListView.builder(
-              itemCount: filteredWeapons.length,
-              itemBuilder: (context, index) {
-                final weapon = filteredWeapons[index];
-                return Card(
-                  elevation: 4,
-                  margin: const EdgeInsets.symmetric(vertical: 8, horizontal: 16),
-                  child: ListTile(
-                    leading: Image.network(
-                      weapon.image,
-                      width: 60,
-                      height: 60,
-                      fit: BoxFit.cover,
-                    ),
-                    title: Text(
-                      weapon.name,
-                      style: const TextStyle(fontWeight: FontWeight.bold),
-                    ),
-                    subtitle: Text(weapon.description),
-                    trailing: IconButton(
-                      icon: const Icon(Icons.favorite_border),
-                      onPressed: () {
-                        ScaffoldMessenger.of(context).showSnackBar(
-                          SnackBar(content: Text('${weapon.name} liké !')),
-                        );
-                      },
-                    ),
-                  ),
-                );
-              },
-            ),
-          ),
-        ],
-      ),
-    );
+  if (showOnlyLiked) {
+    filteredWeapons =
+        filteredWeapons.where((w) => widget.likedWeapons.contains(w.name)).toList();
   }
+
+  return Scaffold(
+    appBar: AppBar(
+      title: const Text("Armes Star Wars"),
+    ),
+    body: Column(
+      children: [
+        Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: ToggleButtons(
+            isSelected: [
+              selectedCategory == 'sabre',
+              selectedCategory == 'blaster',
+              selectedCategory == 'vaisseaux',
+            ],
+            onPressed: (index) {
+              setState(() {
+                selectedCategory = ['sabre', 'blaster', 'vaisseaux'][index];
+              });
+            },
+            children: const [
+              Padding(padding: EdgeInsets.all(8.0), child: Text('Sabres')),
+              Padding(padding: EdgeInsets.all(8.0), child: Text('Blasters')),
+              Padding(padding: EdgeInsets.all(8.0), child: Text('Vaisseaux')),
+            ],
+          ),
+        ),
+
+        
+        Container(
+          padding: const EdgeInsets.symmetric(vertical: 10), 
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              const Text("Afficher les favoris", style: TextStyle(fontSize: 16)),
+              Switch(
+                value: showOnlyLiked,
+                onChanged: (value) {
+                  setState(() {
+                    showOnlyLiked = value;
+                  });
+                },
+              ),
+            ],
+          ),
+        ),
+
+        Expanded(
+          child: filteredWeapons.isEmpty
+              ? const Center(
+                  child: Text(
+                    "Aucune arme trouvée.",
+                    style: TextStyle(fontSize: 18),
+                  ),
+                )
+              : ListView.builder(
+                  itemCount: filteredWeapons.length,
+                  itemBuilder: (context, index) {
+                    final weapon = filteredWeapons[index];
+                    final isLiked = widget.likedWeapons.contains(weapon.name);
+
+                    return Card(
+                      elevation: 4,
+                      margin: const EdgeInsets.symmetric(vertical: 8, horizontal: 16),
+                      child: ListTile(
+                        leading: Image.network(
+                          weapon.image,
+                          width: 60,
+                          height: 60,
+                          fit: BoxFit.cover,
+                        ),
+                        title: Text(
+                          weapon.name,
+                          style: const TextStyle(fontWeight: FontWeight.bold),
+                        ),
+                        subtitle: Text(weapon.description),
+                        trailing: IconButton(
+                          icon: Icon(
+                            isLiked ? Icons.favorite : Icons.favorite_border,
+                            color: isLiked ? Colors.red : null,
+                          ),
+                          onPressed: () {
+                            widget.onLikeToggle(weapon.name);
+                          },
+                        ),
+                      ),
+                    );
+                  },
+                ),
+        ),
+      ],
+    ),
+  );
 }
+}
+
 
 class AboutPage extends StatelessWidget {
   @override
