@@ -1,16 +1,43 @@
-# tp1
+Star W'Arms est une application Flutter permettant de découvrir les différentes armes utilisées dans l'univers Star Wars.
 
-A new Flutter project.
+🚀 Fonctionnalités
 
-## Getting Started
+Page d'accueil : Présentation de l'application avec une image et une introduction.
 
-This project is a starting point for a Flutter application.
+Page "À propos" : Informations sur le développeur (Yoda) et l'objectif de l'application.
 
-A few resources to get you started if this is your first Flutter project:
+Page "Arms" : Une barre de navigation permet de passer facilement d'une page à l'autre.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+🛠️ Technologies utilisées
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Flutter / Dart
+
+📂 Structure du projet
+
+/lib
+│── main.dart           # Fichier principal de l'application
+│── weapon.dart         # Classe qui défini un objet Weapon
+└── assets/             # Dossier contenant les fichiers fixes (images, json)
+
+
+🔧 Installation et exécution
+
+Clonez le projet
+
+git clone https://github.com/nathanckt/amse.git
+cd amse/tp1
+
+Installez les dépendances
+
+flutter pub get
+
+Lancez l'application
+
+flutter run
+
+
+📞 Contact
+
+Si vous avez des questions, contactez-moi à nathancrincket@etu.imt-nord-europe.fr .
+
+May the Force be with you! ✨🚀
